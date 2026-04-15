@@ -150,7 +150,7 @@ Meta =
 | KeyValueMeta
 | TokenTreeMeta
 
-UnsafeMeta =
+--UnsafeMeta =
   'unsafe' '(' Meta ')'
 
 PathMeta =
