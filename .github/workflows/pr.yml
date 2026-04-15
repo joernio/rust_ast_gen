@@ -26,6 +26,10 @@ jobs:
       - name: Run tests
         run: cargo test --locked
 
+      # Making sure that e.g. `rust.ungram` is updated and committed.
+      - name: Check if there are changes
+        uses: NathanielHill/fail-if-changes@master
+
   format:
     runs-on: ubuntu-latest
     steps:
