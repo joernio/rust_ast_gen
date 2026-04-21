@@ -15,7 +15,9 @@ fn main() -> Result<()> {
     let model = Model::from_ungrammar(&grammar)?;
 
     let codegen_version = env!("CARGO_PKG_VERSION").to_string();
-    let codegen_date = chrono::Local::now().format("%d %B %Y, %H:%M:%S %Z").to_string();
+    let codegen_date = chrono::Local::now()
+        .format("%d %B %Y, %H:%M:%S %Z")
+        .to_string();
     let package_name = "io.joern.rust2cpg.parser".to_string();
     let object_name = "RustNodeSyntax".to_string();
     let base_node_trait = "RustNode".to_string();
