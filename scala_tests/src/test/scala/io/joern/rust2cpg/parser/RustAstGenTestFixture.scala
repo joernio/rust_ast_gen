@@ -72,7 +72,7 @@ trait RustAstGenTestFixture {
 
   private def prettyPrintNode(node: RustNode, indent: Int): String = {
     val renderedChildren = childNodes(node).map(child => prettyPrintNode(child, indent + 1))
-    (Seq(("  " * indent) + node.json("nodeKind").str) ++ renderedChildren).mkString("\n")
+    (Seq(("  " * indent) + node.json("nodeKind").str) ++ renderedChildren).mkString(System.lineSeparator())
   }
 
   extension (node: RustNode)
